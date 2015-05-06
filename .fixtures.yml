@@ -1,6 +1,6 @@
 fixtures:
-  repositories:
-    apt: "git://github.com/puppetlabs/puppetlabs-apt.git"
-    stdlib: "git://github.com/puppetlabs/puppetlabs-stdlib.git"
+  forge_modules:
+    apt: "puppetlabs/apt"
+    stdlib: "puppetlabs/stdlib"
   symlinks:
     puppetlabs_apt: "#{source_dir}"
