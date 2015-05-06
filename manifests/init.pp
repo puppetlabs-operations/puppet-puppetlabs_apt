@@ -28,12 +28,14 @@ class puppetlabs_apt(
   }
 
   apt::source { 'puppetlabs':
-    location   => 'http://apt.puppetlabs.com/',
-    key        => '1054B7A24BD6EC30',
-    key_source => 'https://apt.puppetlabs.com/pubkey.gpg',
-    pin        => '550',
-    repos      => $repo_list,
-    release    => $release,
+    location => 'http://apt.puppetlabs.com/',
+    key      => {
+      id     => '1054B7A24BD6EC30',
+      source => 'https://apt.puppetlabs.com/pubkey.gpg'
+    },
+    pin      => '550',
+    repos    => $repo_list,
+    release  => $release,
   }
 
   package{ 'puppetlabs-release':
