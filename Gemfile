@@ -8,10 +8,10 @@ group :test do
 end
 
 group :development do
-  gem "travis"
+  gem "travis", ">= 1.7.4"
   gem "travis-lint"
-  gem "beaker"
-  gem "beaker-rspec"
+  gem "beaker", ">= 1.20.1"
+  gem "beaker-rspec", ">= 3.0.0"
   gem "vagrant-wrapper"
   gem "puppet-blacksmith"
   gem "guard-rake"
